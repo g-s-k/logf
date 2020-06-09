@@ -226,7 +226,7 @@ Fixpoint eqb (n m : nat) : bool :=
   match n, m with
   | O, O => true
   | O, _ => false
-  | S _, O => false
+  | _, O => false
   | S n', S m' => eqb n' m'
   end.
 
